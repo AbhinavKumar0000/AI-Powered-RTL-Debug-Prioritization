@@ -1,0 +1,23 @@
+{
+  "severity": {
+    "count": 1,
+    "results": [
+      {
+        "module": "AXI_CTRL",
+        "message": "AXI burst length violation",
+        "predicted_severity": "ERROR"
+      }
+    ]
+  },
+  "intelligence": {
+    "input_log": "AXI burst length violation",
+    "analysis": {
+      "cluster_id": 2,
+      "cluster_name": "AXI Protocol Errors",
+      "subsystem": "AXI_CTRL",
+      "description": "AXI transaction failures including burst violations and timeouts",
+      "similarity_score": 0.874638698721117,
+      "anomaly": false
+    }
+  }
+}

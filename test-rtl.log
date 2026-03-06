@@ -1,0 +1,29 @@
+1ns [INFO] CPU_CORE instruction fetch started
+5ns [INFO] MEM_CTRL memory read request issued
+9ns [WARNING] AXI_CTRL burst latency slightly high
+13ns [INFO] CACHE_CTRL cache lookup completed
+17ns [WARNING] MEM_CTRL buffer nearing threshold
+21ns [INFO] CPU_CORE decode stage completed
+25ns [WARNING] AXI_CTRL retry transaction issued
+29ns [INFO] DMA_CTRL channel idle
+33ns [WARNING] CACHE_CTRL cache miss detected
+37ns [ERROR] MEM_CTRL memory controller timeout detected
+41ns [WARNING] MEM_CTRL retrying memory transaction
+45ns [ERROR] AXI_CTRL burst length violation
+49ns [INFO] CPU_CORE pipeline stall resolved
+53ns [WARNING] MEM_CTRL queue saturation detected
+57ns [ERROR] CACHE_CTRL cache line parity error
+61ns [WARNING] AXI_CTRL pending response delay
+65ns [ERROR] MEM_CTRL memory write failure
+69ns [WARNING] DMA_CTRL transfer retry issued
+73ns [ERROR] AXI_CTRL protocol mismatch detected
+77ns [CRITICAL] MEM_CTRL controller deadlock detected
+81ns [WARNING] CACHE_CTRL cache eviction delay
+85ns [ERROR] CACHE_CTRL repeated parity mismatch
+89ns [WARNING] AXI_CTRL bus arbitration delay
+93ns [ERROR] AXI_CTRL transaction timeout
+97ns [CRITICAL] CACHE_CTRL cache subsystem failure
+101ns [INFO] CPU_CORE branch resolution complete
+105ns [WARNING] DMA_CTRL transfer latency high
+109ns [INFO] CPU_CORE instruction retire stage
+113ns [WARNING] MEM_CTRL memory refresh pending

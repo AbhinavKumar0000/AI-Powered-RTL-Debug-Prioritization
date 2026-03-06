@@ -1,0 +1,6 @@
+﻿SEVERITY STATUS: 200
+SEVERITY RESPONSE: {"count":2,"results":[{"module":"AXI_CTRL","message":"AXI outstanding read limit reached","predicted_severity":"WARNING"},{"module":"POWER_CTRL","message":"Voltage regulator fine tuning completed","predicted_severity":"INFO"}]}
+INTELLIGENCE STATUS: 200
+INTELLIGENCE RESPONSE: {"input_log":"Voltage sensor reporting out of range","analysis":{"cluster_id":7,"cluster_name":"Voltage Sensor Issues","subsystem":"POWER_CTRL","description":"Voltage sensor calibration or measurement failures","similarity_score":0.8155364084334571,"anomaly":false}}
+RELIABILITY STATUS: 200
+RELIABILITY RESPONSE: {"summary":{"total_logs":2,"modules_analyzed":2},"module_risk":[{"module":"AXI_CTRL","failure_probability":0.7679082856536896,"risk":"HIGH"},{"module":"MEM_CTRL","failure_probability":0.46080036571123656,"risk":"MEDIUM"}]}

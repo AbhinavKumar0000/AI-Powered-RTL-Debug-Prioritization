@@ -1,0 +1,500 @@
+1ns [INFO] CLOCK_MGR primary oscillator lock achieved
+5ns [INFO] PWR_MGR voltage rail 1.2V stabilized
+9ns [INFO] MEM_CTRL memory controller initialization started
+13ns [WARNING] CLOCK_MGR jitter compensation active
+17ns [INFO] BUS_CTRL arbitration logic idle
+21ns [INFO] AXI_CTRL master interface ready
+25ns [WARNING] DDR_CTRL signal glitch on chip select 0
+29ns [INFO] FIFO_BUF write pointer reset
+33ns [INFO] DMA_CTRL channel 0 configuration started
+37ns [ERROR] AXI_CTRL burst length violation detected
+41ns [INFO] PWR_MGR DVFS state transition to 'Performance'
+45ns [WARNING] CLOCK_MGR phase shift error detected
+49ns [INFO] PCIE_CTRL link training sequence initiated
+53ns [INFO] MEM_CTRL refresh command issued
+57ns [ERROR] FIFO_BUF parity error on data bus
+61ns [WARNING] POWER_CTRL voltage sensor calibration drift
+65ns [INFO] DMA_CTRL transfer request granted
+69ns [INFO] INTERCONNECT arbitration granted
+73ns [ERROR] AXI_CTRL master lock violation
+77ns [WARNING] DDR_CTRL address bus noise detected
+81ns [INFO] CLOCK_MGR clock domain crossing pass
+85ns [INFO] PWR_MGR power saving mode entered
+89ns [ERROR] MEM_CTRL memory controller timeout detected
+93ns [WARNING] PCIE_CTRL protocol layer retry issued
+97ns [INFO] FIFO_BUF status: 50% capacity
+101ns [INFO] AXI_CTRL read data valid
+105ns [ERROR] CLOCK_MGR clock synchronization failure
+109ns [WARNING] DMA_CTRL bus arbitration lag
+113ns [INFO] PWR_MGR regulator stability check pass
+117ns [INFO] INTERCONNECT path optimized
+121ns [ERROR] DDR_CTRL chip select logic failure
+125ns [WARNING] FIFO_BUF high watermark reached
+129ns [INFO] MEM_CTRL auto-refresh interval
+133ns [INFO] CLOCK_MGR frequency stabilization complete
+137ns [ERROR] PCIE_CTRL link training timeout
+141ns [WARNING] AXI_CTRL pending response delay
+145ns [INFO] PWR_MGR voltage ripple within tolerance
+149ns [INFO] DMA_CTRL transfer complete
+153ns [ERROR] POWER_CTRL voltage sensor measurement failure
+157ns [WARNING] MEM_CTRL buffer nearing threshold
+161ns [INFO] INTERCONNECT link status: UP
+165ns [INFO] CLOCK_MGR manual override engaged
+169ns [ERROR] FIFO_BUF overflow condition
+173ns [WARNING] PCIE_CTRL receiver buffer nearing limit
+177ns [INFO] AXI_CTRL write address accepted
+181ns [INFO] DDR_CTRL strobe line stabilized
+185ns [ERROR] CLOCK_MGR CDC bridge timing violation
+189ns [WARNING] DMA_CTRL priority inversion detected
+193ns [INFO] PWR_MGR DVFS scaling completed
+197ns [INFO] INTERCONNECT bridge active
+201ns [ERROR] MEM_CTRL command queue saturation
+205ns [WARNING] AXI_CTRL burst latency slightly high
+209ns [INFO] FIFO_BUF underflow warning cleared
+213ns [INFO] CLOCK_MGR phase lock loop locked
+217ns [ERROR] DDR_CTRL data bus parity failure
+221ns [WARNING] PCIE_CTRL lane-to-lane deskew failure
+225ns [INFO] DMA_CTRL multi-block transfer initiated
+229ns [INFO] PWR_MGR battery level critical
+233ns [ERROR] POWER_CTRL regulator oscillation detected
+237ns [WARNING] FIFO_BUF read burst completed
+241ns [INFO] MEM_CTRL page hit detected
+245ns [INFO] CLOCK_MGR clock tree optimization
+249ns [ERROR] AXI_CTRL protocol mismatch detected
+253ns [WARNING] DDR_CTRL memory scrub delayed
+257ns [INFO] PCIE_CTRL physical layer ready
+261ns [INFO] DMA_CTRL cyclic redundancy check failed
+265ns [ERROR] CLOCK_MGR jitter limit exceeded
+269ns [WARNING] PWR_MGR current limit exceeded
+273ns [INFO] FIFO_BUF pointer incremented
+277ns [INFO] INTERCONNECT throughput monitored
+281ns [ERROR] MEM_CTRL refresh interval exceeded
+285ns [WARNING] AXI_CTRL id conflict possible
+289ns [INFO] DDR_CTRL calibration successful
+293ns [INFO] CLOCK_MGR spread spectrum enabled
+297ns [ERROR] FIFO_BUF write/read collision
+301ns [WARNING] POWER_CTRL sensor calibration missing
+305ns [INFO] DMA_CTRL channel status active
+309ns [INFO] PCIE_CTRL flow control enabled
+313ns [ERROR] AXI_CTRL invalid strobe signal
+317ns [WARNING] CLOCK_MGR reference clock drift
+321ns [INFO] PWR_MGR standby mode ready
+325ns [INFO] INTERCONNECT arbiter status: IDLE
+329ns [ERROR] DDR_CTRL command bus parity error
+333ns [WARNING] MEM_CTRL precharge time violation
+337ns [INFO] FIFO_BUF reset sequence started
+341ns [INFO] CLOCK_MGR clock source switch
+345ns [ERROR] PCIE_CTRL TLP header corruption
+349ns [WARNING] DMA_CTRL descriptor read latency
+353ns [INFO] AXI_CTRL write strobe active
+357ns [INFO] PWR_MGR peripheral clock gated
+361ns [ERROR] CLOCK_MGR frequency monitor fail
+365ns [WARNING] FIFO_BUF status: 90% full
+369ns [INFO] MEM_CTRL scheduling priority re-evaluated
+373ns [INFO] INTERCONNECT dynamic routing active
+377ns [ERROR] DDR_CTRL unaligned memory access
+381ns [WARNING] PCIE_CTRL replay timer expired
+385ns [INFO] DMA_CTRL priority rotation
+389ns [INFO] PWR_MGR supply voltage nominal
+393ns [ERROR] AXI_CTRL slave access violation
+397ns [WARNING] CLOCK_MGR oscillator jitter
+401ns [INFO] FIFO_BUF data integrity verified
+405ns [INFO] MEM_CTRL cas latency calibrated
+409ns [ERROR] POWER_CTRL thermal shutdown threshold hit
+413ns [WARNING] DDR_CTRL burst chop enabled
+417ns [INFO] PCIE_CTRL power management state: D3
+421ns [INFO] CLOCK_MGR pll frequency reached
+425ns [ERROR] INTERCONNECT fatal routing table error
+429ns [WARNING] DMA_CTRL bus contention
+433ns [INFO] AXI_CTRL address tracking active
+437ns [INFO] PWR_MGR ldo regulator drop
+441ns [ERROR] FIFO_BUF head/tail pointer sync loss
+445ns [WARNING] MEM_CTRL row hammer protection triggered
+449ns [INFO] DDR_CTRL write latency optimized
+453ns [INFO] PCIE_CTRL credit return successful
+457ns [ERROR] CLOCK_MGR primary oscillator lost
+461ns [WARNING] INTERCONNECT bandwidth usage 95%
+465ns [INFO] DMA_CTRL burst count updated
+469ns [INFO] PWR_MGR deep sleep handshake
+473ns [ERROR] AXI_CTRL slave timeout detected
+477ns [WARNING] FIFO_BUF capacity check: low
+481ns [INFO] MEM_CTRL auto-precharge enabled
+485ns [INFO] CLOCK_MGR phase lock duration
+489ns [ERROR] DDR_CTRL logic delay violation
+493ns [WARNING] POWER_CTRL voltage ripple limit
+497ns [INFO] PCIE_CTRL link training successful
+501ns [INFO] DMA_CTRL scatter gather active
+505ns [INFO] INTERCONNECT path availability high
+509ns [ERROR] FIFO_BUF data corruption detected
+513ns [WARNING] CLOCK_MGR frequency drift detected
+517ns [INFO] PWR_MGR peripheral power gated
+521ns [INFO] AXI_CTRL write address accepted
+525ns [ERROR] PCIE_CTRL fatal protocol violation
+529ns [WARNING] DDR_CTRL memory controller hang
+533ns [INFO] MEM_CTRL refresh overhead monitored
+537ns [INFO] CLOCK_MGR manual clock gate off
+541ns [ERROR] POWER_CTRL critical voltage drop
+545ns [WARNING] INTERCONNECT link latency high
+549ns [INFO] FIFO_BUF status: normal
+553ns [INFO] DMA_CTRL transfer complete
+557ns [ERROR] MEM_CTRL uncorrectable ecc error
+561ns [WARNING] AXI_CTRL retry transaction issued
+565ns [INFO] DDR_CTRL clock source stable
+569ns [INFO] PCIE_CTRL link status: DOWN
+573ns [ERROR] CLOCK_MGR oscillator failure
+577ns [WARNING] PWR_MGR voltage ripple detected
+581ns [INFO] INTERCONNECT bypass mode active
+585ns [INFO] FIFO_BUF read pointer reset
+589ns [ERROR] DMA_CTRL destination address invalid
+593ns [WARNING] MEM_CTRL bank collision detected
+597ns [INFO] CLOCK_MGR reference clock locked
+601ns [INFO] AXI_CTRL write data transfer
+605ns [ERROR] PCIE_CTRL corrupt sequence number
+609ns [WARNING] DDR_CTRL signal integrity alert
+613ns [INFO] PWR_MGR voltage scaling completed
+617ns [INFO] INTERCONNECT arbitration granted
+621ns [ERROR] FIFO_BUF tail pointer corruption
+625ns [WARNING] AXI_CTRL strobe bit inconsistency
+629ns [INFO] DMA_CTRL priority level changed
+633ns [INFO] MEM_CTRL scheduler priority high
+637ns [ERROR] CLOCK_MGR pll unlock duration
+641ns [WARNING] POWER_CTRL voltage rail instability
+645ns [INFO] PCIE_CTRL flow control update
+649ns [INFO] DDR_CTRL chip select activated
+653ns [ERROR] INTERCONNECT packet size violation
+657ns [WARNING] MEM_CTRL buffer nearing overflow
+661ns [INFO] FIFO_BUF flush initiated
+665ns [INFO] AXI_CTRL read address accepted
+669ns [ERROR] PWR_MGR power sequence failure
+673ns [WARNING] CLOCK_MGR jitter above nominal
+677ns [INFO] DMA_CTRL transfer resume
+681ns [INFO] MEM_CTRL burst refresh cycle
+685ns [ERROR] PCIE_CTRL lane reversal error
+689ns [WARNING] DDR_CTRL address bus glitch
+693ns [INFO] INTERCONNECT throughput optimized
+697ns [INFO] FIFO_BUF wrap-around condition
+701ns [ERROR] AXI_CTRL master lock failure
+705ns [WARNING] CLOCK_MGR reference clock drift
+709ns [INFO] PWR_MGR voltage scaling ready
+713ns [INFO] DMA_CTRL data alignment logic
+717ns [ERROR] MEM_CTRL bank address out of range
+721ns [WARNING] INTERCONNECT buffer nearing limit
+725ns [INFO] DDR_CTRL precharge sequence start
+729ns [INFO] FIFO_BUF capacity check: normal
+733ns [ERROR] POWER_CTRL voltage monitor fault
+737ns [WARNING] PCIE_CTRL link training failure
+741ns [INFO] CLOCK_MGR frequency check pass
+745ns [INFO] AXI_CTRL transaction tracking ID: 0x4F
+749ns [ERROR] INTERCONNECT unroutable packet hit
+753ns [WARNING] MEM_CTRL command queue lag
+757ns [INFO] DMA_CTRL burst mode enabled
+761ns [INFO] PWR_MGR core voltage ramp up
+765ns [ERROR] FIFO_BUF parity bit mismatch
+769ns [WARNING] CLOCK_MGR pll phase shift
+773ns [INFO] DDR_CTRL strobe line calibrated
+777ns [INFO] PCIE_CTRL link training phase: 1
+781ns [ERROR] AXI_CTRL invalid write data interleaving
+785ns [WARNING] INTERCONNECT link latency rising
+789ns [INFO] FIFO_BUF write request acknowledged
+793ns [INFO] MEM_CTRL training pattern success
+797ns [ERROR] PWR_MGR critical voltage drop
+801ns [WARNING] DMA_CTRL high latency request
+805ns [INFO] CLOCK_MGR jitter reduction active
+809ns [INFO] AXI_CTRL read transaction ready
+813ns [ERROR] PCIE_CTRL flow control credit lost
+817ns [WARNING] DDR_CTRL address out of sync
+821ns [INFO] INTERCONNECT path availability low
+825ns [INFO] FIFO_BUF read pointer incremented
+829ns [ERROR] MEM_CTRL cas latency mismatch
+833ns [WARNING] CLOCK_MGR clock domain crossing glitch
+837ns [INFO] PWR_MGR battery level low
+841ns [INFO] DMA_CTRL multi-channel sync
+845ns [ERROR] AXI_CTRL burst transaction timeout
+849ns [WARNING] INTERCONNECT link status: WAITING
+853ns [INFO] DDR_CTRL low power mode active
+857ns [INFO] FIFO_BUF write data committed
+861ns [ERROR] POWER_CTRL regulation error
+865ns [WARNING] PCIE_CTRL training pattern failed
+869ns [INFO] CLOCK_MGR pll lock duration
+873ns [INFO] MEM_CTRL address decoding idle
+877ns [ERROR] INTERCONNECT port buffer overflow
+881ns [WARNING] AXI_CTRL write response delay
+885ns [INFO] DMA_CTRL transfer started
+889ns [INFO] PWR_MGR power rail switched
+893ns [ERROR] FIFO_BUF memory mapping error
+897ns [WARNING] CLOCK_MGR oscillator frequency drift
+901ns [INFO] DDR_CTRL bank status ready
+905ns [INFO] INTERCONNECT routing scheme: MESH
+909ns [ERROR] AXI_CTRL slave ready timeout
+913ns [WARNING] PCIE_CTRL receiver deskew error
+917ns [INFO] CLOCK_MGR primary clock stable
+921ns [INFO] MEM_CTRL refresh rate high
+925ns [ERROR] PWR_MGR undervoltage shutdown
+929ns [WARNING] DMA_CTRL destination busy
+933ns [INFO] FIFO_BUF capacity: 75%
+937ns [INFO] INTERCONNECT quality of service: PASS
+941ns [ERROR] AXI_CTRL illegal burst length
+945ns [WARNING] PCIE_CTRL link credit low
+949ns [INFO] CLOCK_MGR gating bypass active
+953ns [INFO] DDR_CTRL command sequence complete
+957ns [ERROR] INTERCONNECT arbitration deadlock
+961ns [WARNING] MEM_CTRL scheduler latency
+965ns [INFO] DMA_CTRL link list processed
+969ns [INFO] PWR_MGR peripheral clock stable
+973ns [ERROR] FIFO_BUF read burst corrupted
+977ns [WARNING] AXI_CTRL master interface congestion
+981ns [INFO] INTERCONNECT node status: ACTIVE
+985ns [INFO] CLOCK_MGR jitter filter on
+989ns [ERROR] DDR_CTRL data signal glitch persistent
+993ns [WARNING] PCIE_CTRL corrupt TLP packet
+997ns [INFO] MEM_CTRL precharge sequence complete
+1001ns [INFO] AXI_CTRL read burst sequence
+1005ns [ERROR] POWER_CTRL voltage rail dropout
+1009ns [WARNING] DMA_CTRL arbitration priority conflict
+1013ns [INFO] FIFO_BUF write burst completed
+1017ns [INFO] CLOCK_MGR oscillator lock achieved
+1021ns [ERROR] INTERCONNECT invalid packet header
+1025ns [WARNING] MEM_CTRL training pattern delay
+1029ns [INFO] DDR_CTRL clock polarity: NOMINAL
+1033ns [INFO] PCIE_CTRL power management: L1
+1037ns [ERROR] AXI_CTRL narrow transfer unsupported
+1041ns [WARNING] FIFO_BUF status: overflow imminent
+1045ns [INFO] CLOCK_MGR spread spectrum status: OK
+1049ns [INFO] DMA_CTRL data integrity verified
+1053ns [ERROR] PWR_MGR ldo regulation fault
+1057ns [WARNING] PCIE_CTRL link training delayed
+1061ns [INFO] INTERCONNECT path optimized
+1065ns [INFO] MEM_CTRL auto-refresh interval
+1069ns [ERROR] FIFO_BUF tail pointer mismatch
+1073ns [WARNING] CLOCK_MGR frequency check: BORDERLINE
+1077ns [INFO] DDR_CTRL bus idle
+1081ns [INFO] AXI_CTRL master lock violation
+1085ns [ERROR] INTERCONNECT destination unreachable
+1089ns [WARNING] DMA_CTRL address alignment warning
+1093ns [INFO] PWR_MGR current draw within range
+1097ns [INFO] FIFO_BUF data integrity check
+1101ns [ERROR] MEM_CTRL unrecoverable ecc fault
+1105ns [WARNING] PCIE_CTRL credit return delay
+1109ns [INFO] CLOCK_MGR primary clock stable
+1113ns [INFO] DDR_CTRL address decoding pass
+1117ns [ERROR] AXI_CTRL read data parity error
+1121ns [WARNING] FIFO_BUF capacity check: high
+1125ns [INFO] INTERCONNECT link status: ACTIVE
+1129ns [INFO] DMA_CTRL transfer count updated
+1133ns [ERROR] POWER_CTRL sensor calibration fault
+1137ns [WARNING] CLOCK_MGR pll phase jitter
+1141ns [INFO] PWR_MGR standby mode active
+1145ns [INFO] PCIE_CTRL TLP acknowledgment received
+1149ns [ERROR] DDR_CTRL command parity bit error
+1153ns [WARNING] MEM_CTRL refresh command delayed
+1157ns [INFO] FIFO_BUF read pointer reset
+1161ns [INFO] CLOCK_MGR fractional divider updated
+1165ns [ERROR] INTERCONNECT packet dropped
+1169ns [WARNING] AXI_CTRL write response latency
+1173ns [INFO] DMA_CTRL burst mode started
+1177ns [INFO] PWR_MGR power rail stability check
+1181ns [ERROR] FIFO_BUF data write corruption
+1185ns [WARNING] PCIE_CTRL corrupt sequence number
+1189ns [INFO] MEM_CTRL ddr timing parameters loaded
+1193ns [INFO] CLOCK_MGR jitter reduction pass
+1197ns [ERROR] POWER_CTRL critical voltage drop
+1201ns [WARNING] DDR_CTRL strobe drift detected
+1205ns [INFO] INTERCONNECT routing scheme: TORUS
+1209ns [INFO] AXI_CTRL transaction tracking ID: 0x8A
+1213ns [ERROR] DMA_CTRL destination address invalid
+1217ns [WARNING] FIFO_BUF status: 95% capacity
+1221ns [INFO] CLOCK_MGR PLL status: LOCKED
+1225ns [INFO] PWR_MGR peripheral clock gated
+1229ns [ERROR] INTERCONNECT arbiter lockup detected
+1233ns [WARNING] MEM_CTRL row hit rate falling
+1237ns [INFO] PCIE_CTRL lane deskew complete
+1241ns [INFO] DDR_CTRL clock tree delay check
+1245ns [ERROR] AXI_CTRL master lock violation
+1249ns [WARNING] CLOCK_MGR phase lockduration warning
+1253ns [INFO] FIFO_BUF wrap-around condition
+1257ns [INFO] DMA_CTRL multi-channel sync completed
+1261ns [ERROR] PWR_MGR voltage rail brownout
+1265ns [WARNING] INTERCONNECT link noise alert
+1269ns [INFO] MEM_CTRL address mapping updated
+1273ns [INFO] AXI_CTRL write strobe active
+1277ns [ERROR] FIFO_BUF tail pointer corruption
+1281ns [WARNING] PCIE_CTRL lane-to-lane deskew delay
+1285ns [INFO] CLOCK_MGR jitter compensation: ON
+1289ns [INFO] DDR_CTRL signal parity check: PASS
+1293ns [ERROR] DMA_CTRL cyclic redundancy check failed
+1297ns [WARNING] POWER_CTRL voltage sensor noise
+1301ns [INFO] INTERCONNECT bridge status: OK
+1305ns [INFO] AXI_CTRL transaction completed
+1309ns [ERROR] MEM_CTRL refresh controller hang
+1313ns [WARNING] FIFO_BUF high watermark alert
+1317ns [INFO] CLOCK_MGR primary frequency stable
+1321ns [INFO] PWR_MGR core voltage stabilized
+1325ns [ERROR] PCIE_CTRL link training sequence fail
+1329ns [WARNING] AXI_CTRL pending response delay
+1333ns [INFO] DDR_CTRL bank selection ready
+1337ns [INFO] INTERCONNECT quality of service: HIGH
+1341ns [ERROR] CLOCK_MGR oscillator failure detected
+1345ns [WARNING] DMA_CTRL descriptor fetch latency
+1349ns [INFO] FIFO_BUF data committed
+1353ns [INFO] MEM_CTRL command pipeline depth
+1357ns [ERROR] PWR_MGR current limit exceeded
+1361ns [WARNING] INTERCONNECT port congestion
+1365ns [INFO] AXI_CTRL address bus idle
+1369ns [INFO] PCIE_CTRL physical layer up
+1373ns [ERROR] DDR_CTRL command parity failure
+1377ns [WARNING] CLOCK_MGR frequency drift rising
+1381ns [INFO] FIFO_BUF read request pending
+1385ns [INFO] DMA_CTRL transfer count: 512
+1389ns [ERROR] MEM_CTRL row address out of bounds
+1393ns [WARNING] AXI_CTRL burst transaction lag
+1397ns [INFO] INTERCONNECT arbiter priority rotation
+1401ns [INFO] PWR_MGR peripheral power stable
+1405ns [ERROR] FIFO_BUF tail/head pointer collision
+1409ns [WARNING] PCIE_CTRL lane training jitter
+1413ns [INFO] CLOCK_MGR spread spectrum enabled
+1417ns [INFO] DDR_CTRL precharge sequence success
+1421ns [ERROR] AXI_CTRL exclusive access violation
+1425ns [WARNING] POWER_CTRL regulator temperature high
+1429ns [INFO] INTERCONNECT path availability high
+1433ns [INFO] DMA_CTRL multi-block transfer complete
+1437ns [ERROR] MEM_CTRL initialization sequence fail
+1441ns [WARNING] FIFO_BUF capacity check: normal
+1445ns [INFO] CLOCK_MGR manual clock gate off
+1449ns [INFO] PWR_MGR power rail check complete
+1453ns [ERROR] PCIE_CTRL corrupt sequence number
+1457ns [WARNING] INTERCONNECT link latency alert
+1461ns [INFO] AXI_CTRL write data transferred
+1465ns [INFO] DDR_CTRL training pattern verify: PASS
+1469ns [ERROR] CLOCK_MGR pll unlockduration timeout
+1473ns [WARNING] DMA_CTRL priority inversion event
+1477ns [INFO] FIFO_BUF write burst completed
+1481ns [INFO] MEM_CTRL memory scrub complete
+1485ns [ERROR] PWR_MGR power sequence timeout
+1489ns [WARNING] AXI_CTRL read response latency
+1493ns [INFO] INTERCONNECT arbitration granted
+1497ns [INFO] PCIE_CTRL flow control update ready
+1501ns [ERROR] FIFO_BUF read/write collision
+1505ns [WARNING] DDR_CTRL address out of sync alert
+1509ns [INFO] CLOCK_MGR reference clock locked
+1513ns [INFO] DMA_CTRL multi-channel sync
+1517ns [ERROR] MEM_CTRL training pattern failed
+1521ns [WARNING] POWER_CTRL voltage sensor offset
+1525ns [INFO] AXI_CTRL write address accepted
+1529ns [INFO] INTERCONNECT bandwidth allocated
+1533ns [ERROR] PCIE_CTRL lane training phase fail
+1537ns [WARNING] FIFO_BUF data integrity check delay
+1541ns [INFO] CLOCK_MGR phase lock loop stable
+1545ns [INFO] PWR_MGR core voltage ramp up
+1549ns [ERROR] AXI_CTRL master lock violation
+1553ns [WARNING] DDR_CTRL signal integrity drift
+1557ns [INFO] INTERCONNECT path status: ACTIVE
+1561ns [INFO] MEM_CTRL refresh controller idle
+1565ns [ERROR] DMA_CTRL invalid transfer direction
+1569ns [WARNING] CLOCK_MGR frequency limit check fail
+1573ns [INFO] FIFO_BUF capacity: 50%
+1577ns [INFO] PCIE_CTRL TLP CRC success
+1581ns [ERROR] PWR_MGR regulator oscillation detected
+1585ns [WARNING] INTERCONNECT link latency high
+1589ns [INFO] AXI_CTRL write transaction completed
+1593ns [INFO] DDR_CTRL strobe line calibrated
+1597ns [ERROR] FIFO_BUF head pointer corruption
+1601ns [WARNING] MEM_CTRL bank precharge delay
+1605ns [INFO] CLOCK_MGR frequency stabilization complete
+1609ns [INFO] DMA_CTRL descriptor read complete
+1613ns [ERROR] PCIE_CTRL link training failure
+1617ns [WARNING] AXI_CTRL master interface congestion
+1621ns [INFO] PWR_MGR standby mode active
+1625ns [INFO] INTERCONNECT quality of service: NORMAL
+1629ns [ERROR] CLOCK_MGR clock domain crossing failure
+1633ns [WARNING] DDR_CTRL chip select glitch alert
+1637ns [INFO] FIFO_BUF pointer incremented
+1641ns [INFO] MEM_CTRL address decoding pass
+1645ns [ERROR] DMA_CTRL fatal channel error
+1649ns [WARNING] POWER_CTRL voltage ripple warning
+1653ns [INFO] AXI_CTRL read data valid
+1657ns [INFO] PCIE_CTRL receiver deskew pass
+1661ns [ERROR] INTERCONNECT fatal routing table error
+1665ns [WARNING] CLOCK_MGR pll phase shift rising
+1669ns [INFO] FIFO_BUF write data committed
+1673ns [INFO] PWR_MGR supply voltage nominal
+1677ns [ERROR] DDR_CTRL address bus parity error
+1681ns [WARNING] MEM_CTRL refresh overhead monitored
+1685ns [INFO] AXI_CTRL read burst sequence
+1689ns [INFO] DMA_CTRL multi-block transfer ready
+1693ns [ERROR] FIFO_BUF status: overflow imminent
+1697ns [WARNING] PCIE_CTRL lane training jitter high
+1701ns [INFO] CLOCK_MGR phase lock loop locked
+1705ns [INFO] INTERCONNECT path status: UP
+1709ns [ERROR] PWR_MGR core voltage drop handled fail
+1713ns [WARNING] DDR_CTRL memory controller lag
+1717ns [INFO] AXI_CTRL write burst completed
+1721ns [INFO] MEM_CTRL memory scrub initiated
+1725ns [ERROR] CLOCK_MGR oscillator failure detected
+1729ns [WARNING] DMA_CTRL bus contention warning
+1733ns [INFO] FIFO_BUF capacity: 25%
+1737ns [INFO] PCIE_CTRL link training successful
+1741ns [ERROR] INTERCONNECT arbitration deadlock
+1745ns [WARNING] AXI_CTRL id conflict alert
+1749ns [INFO] PWR_MGR power rail check: OK
+1753ns [INFO] DDR_CTRL signal parity check: PASS
+1757ns [ERROR] FIFO_BUF tail pointer mismatch
+1761ns [WARNING] MEM_CTRL training pattern delay
+1765ns [INFO] CLOCK_MGR frequency monitor start
+1769ns [INFO] AXI_CTRL data bus idle
+1773ns [ERROR] POWER_CTRL thermal shutdown threshold hit
+1777ns [WARNING] PCIE_CTRL corrupt TLP packet detected
+1781ns [INFO] INTERCONNECT throughput monitored
+1785ns [INFO] DMA_CTRL channel status: IDLE
+1789ns [ERROR] DDR_CTRL chip select failure
+1793ns [WARNING] CLOCK_MGR pll frequency drift
+1797ns [INFO] FIFO_BUF write address accepted
+1801ns [INFO] PWR_MGR bias voltage stabilized
+1805ns [ERROR] AXI_CTRL master lock violation
+1809ns [WARNING] INTERCONNECT link latency high
+1813ns [INFO] MEM_CTRL refresh interval set
+1817ns [INFO] CLOCK_MGR oscillator lock status: OK
+1821ns [ERROR] FIFO_BUF read/write collision
+1825ns [WARNING] PCIE_CTRL credit return delay
+1829ns [INFO] AXI_CTRL write address accepted
+1833ns [INFO] DDR_CTRL training pattern success
+1837ns [ERROR] DMA_CTRL unauthorized channel access
+1841ns [WARNING] POWER_CTRL voltage monitor jitter
+1845ns [INFO] INTERCONNECT dynamic routing active
+1849ns [INFO] CLOCK_MGR clock tree optimization
+1853ns [ERROR] MEM_CTRL unrecoverable ecc fault
+1857ns [WARNING] AXI_CTRL strobe bit inconsistency
+1861ns [INFO] FIFO_BUF capacity check: normal
+1865ns [INFO] PCIE_CTRL lane status: ACTIVE
+1869ns [ERROR] PWR_MGR undervoltage shutdown
+1873ns [WARNING] DDR_CTRL signal integrity loss
+1877ns [INFO] INTERCONNECT link status: UP
+1881ns [INFO] CLOCK_MGR reference clock stable
+1885ns [ERROR] FIFO_BUF data corruption detected
+1889ns [WARNING] AXI_CTRL write response delay
+1893ns [INFO] MEM_CTRL address decoding pass
+1897ns [INFO] DMA_CTRL multi-channel sync
+1901ns [ERROR] PCIE_CTRL corrupt sequence number
+1905ns [WARNING] CLOCK_MGR oscillator frequency drift
+1909ns [INFO] INTERCONNECT routing scheme: NoC
+1913ns [INFO] DDR_CTRL strobe line stabilized
+1917ns [ERROR] AXI_CTRL slave timeout detected
+1921ns [WARNING] FIFO_BUF status: 90% full
+1925ns [INFO] CLOCK_MGR primary clock stable
+1929ns [INFO] PWR_MGR peripheral clock gated
+1933ns [ERROR] MEM_CTRL memory controller hang
+1937ns [WARNING] INTERCONNECT link latency high
+1941ns [INFO] AXI_CTRL write address accepted
+1945ns [INFO] PCIE_CTRL link training sequence start
+1949ns [ERROR] FIFO_BUF tail pointer corruption
+1953ns [WARNING] CLOCK_MGR jitter limit exceeded
+1957ns [INFO] DDR_CTRL precharge sequence started
+1961ns [INFO] INTERCONNECT arbitration granted
+1965ns [ERROR] AXI_CTRL master lock violation
+1969ns [WARNING] PWR_MGR current limit reached
+1973ns [INFO] MEM_CTRL training pattern complete
+1977ns [INFO] CLOCK_MGR phase lock loop locked
+1981ns [ERROR] PCIE_CTRL link training failure
+1985ns [WARNING] AXI_CTRL burst transaction lag
+1989ns [INFO] FIFO_BUF capacity check: LOW
+1993ns [ERROR] INTERCONNECT fatal routing table error
+1997ns [CRITICAL] SYSTEM thermal shutdown triggered
