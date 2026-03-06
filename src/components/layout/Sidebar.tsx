@@ -42,7 +42,7 @@ export function Sidebar() {
           </div>
           {!collapsed && (
             <span className="text-[14px] font-semibold text-[#E6EDF3] tracking-tight whitespace-nowrap">
-              INT16 Priority
+              Bug Prioritizer
             </span>
           )}
         </div>
@@ -109,51 +109,57 @@ export function Sidebar() {
             </div>
           </div>
         ) : (
-          <div className="flex flex-col space-y-3">
-            <span className="text-[10px] font-bold text-[#6B7280] uppercase tracking-wider mb-1 px-1">Development Team</span>
+          <div className="flex flex-col space-y-4">
+            <div className="px-1 py-1.5 mb-2">
+              <span className="text-[10px] font-bold text-[#6B7280] uppercase tracking-[0.2em] mb-2 block">Development Team</span>
+              <div className="inline-flex items-center gap-2 px-2 py-1 bg-[#161C24] border border-[#1E2632] rounded-md">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#4F8CFF] shadow-[0_0_8px_rgba(79,140,255,0.4)]" />
+                <span className="text-[9px] font-bold text-[#4F8CFF] uppercase tracking-wider">VIT Bhopal University</span>
+              </div>
+            </div>
 
             {/* Abhinav */}
-            <div className="flex items-center gap-3 group">
-              <div className="w-8 h-8 rounded-full bg-[#4F8CFF]/10 border border-[#4F8CFF]/20 flex items-center justify-center text-[#4F8CFF] font-bold text-[11px] shrink-0">AK</div>
+            <div className="flex items-center gap-3 group px-1">
+              <div className="w-8 h-8 rounded-full bg-[#4F8CFF]/10 border border-[#4F8CFF]/20 flex items-center justify-center text-[#4F8CFF] font-black text-[10px] shrink-0 shadow-sm transition-transform group-hover:scale-105">AK</div>
               <div className="flex flex-col">
-                <span className="text-[12px] font-semibold text-[#E6E8EF] group-hover:text-white transition-colors">Abhinav Kumar</span>
-                <span className="text-[10px] font-medium text-[#6B7280]">AI & Backend Engineering</span>
+                <span className="text-[13px] font-bold text-white tracking-tight group-hover:text-[#4F8CFF] transition-colors">Abhinav Kumar</span>
+                <span className="text-[10px] font-medium text-[#6B7280] italic leading-tight uppercase tracking-wide">AI & Backend Engineering</span>
               </div>
             </div>
 
             {/* Nishant */}
-            <div className="flex items-center gap-3 group">
-              <div className="w-8 h-8 rounded-full bg-[#EAB308]/10 border border-[#EAB308]/20 flex items-center justify-center text-[#EAB308] font-bold text-[11px] shrink-0">NA</div>
+            <div className="flex items-center gap-3 group px-1">
+              <div className="w-8 h-8 rounded-full bg-[#EAB308]/10 border border-[#EAB308]/20 flex items-center justify-center text-[#EAB308] font-black text-[10px] shrink-0 shadow-sm transition-transform group-hover:scale-105">NA</div>
               <div className="flex flex-col">
-                <span className="text-[12px] font-semibold text-[#E6E8EF] group-hover:text-white transition-colors">Nishant Aryan</span>
-                <span className="text-[10px] font-medium text-[#6B7280]">Frontend Development</span>
+                <span className="text-[13px] font-bold text-white tracking-tight group-hover:text-[#EAB308] transition-colors">Nishant Aryan</span>
+                <span className="text-[10px] font-medium text-[#6B7280] italic leading-tight uppercase tracking-wide">Frontend Development</span>
               </div>
             </div>
 
             {/* Harsh */}
-            <div className="flex items-center gap-3 group">
-              <div className="w-8 h-8 rounded-full bg-[#10B981]/10 border border-[#10B981]/20 flex items-center justify-center text-[#10B981] font-bold text-[11px] shrink-0">HM</div>
+            <div className="flex items-center gap-3 group px-1">
+              <div className="w-8 h-8 rounded-full bg-[#10B981]/10 border border-[#10B981]/20 flex items-center justify-center text-[#10B981] font-black text-[10px] shrink-0 shadow-sm transition-transform group-hover:scale-105">HM</div>
               <div className="flex flex-col">
-                <span className="text-[12px] font-semibold text-[#E6E8EF] group-hover:text-white transition-colors">Harsh Kumar Mishra</span>
-                <span className="text-[10px] font-medium text-[#6B7280]">Systems Architecture</span>
+                <span className="text-[13px] font-bold text-white tracking-tight group-hover:text-[#10B981] transition-colors">Harsh Kumar Mishra</span>
+                <span className="text-[10px] font-medium text-[#6B7280] italic leading-tight uppercase tracking-wide">Systems Architecture</span>
               </div>
             </div>
 
             {/* Ayush */}
-            <div className="flex items-center gap-3 group">
-              <div className="w-8 h-8 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 flex items-center justify-center text-[#8B5CF6] font-bold text-[11px] shrink-0">AG</div>
+            <div className="flex items-center gap-3 group px-1">
+              <div className="w-8 h-8 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 flex items-center justify-center text-[#8B5CF6] font-black text-[10px] shrink-0 shadow-sm transition-transform group-hover:scale-105">AG</div>
               <div className="flex flex-col">
-                <span className="text-[12px] font-semibold text-[#E6E8EF] group-hover:text-white transition-colors">Ayush Gupta</span>
-                <span className="text-[10px] font-medium text-[#6B7280]">Data Pipeline Design</span>
+                <span className="text-[13px] font-bold text-white tracking-tight group-hover:text-[#8B5CF6] transition-colors">Ayush Gupta</span>
+                <span className="text-[10px] font-medium text-[#6B7280] italic leading-tight uppercase tracking-wide">Data Pipeline Design</span>
               </div>
             </div>
 
             {/* Aditya */}
-            <div className="flex items-center gap-3 group">
-              <div className="w-8 h-8 rounded-full bg-[#EC4899]/10 border border-[#EC4899]/20 flex items-center justify-center text-[#EC4899] font-bold text-[11px] shrink-0">AV</div>
+            <div className="flex items-center gap-3 group px-1">
+              <div className="w-8 h-8 rounded-full bg-[#EC4899]/10 border border-[#EC4899]/20 flex items-center justify-center text-[#EC4899] font-black text-[10px] shrink-0 shadow-sm transition-transform group-hover:scale-105">AV</div>
               <div className="flex flex-col">
-                <span className="text-[12px] font-semibold text-[#E6E8EF] group-hover:text-white transition-colors">Aditya Verma</span>
-                <span className="text-[10px] font-medium text-[#6B7280]">Verification Strategy</span>
+                <span className="text-[13px] font-bold text-white tracking-tight group-hover:text-[#EC4899] transition-colors">Aditya Verma</span>
+                <span className="text-[10px] font-medium text-[#6B7280] italic leading-tight uppercase tracking-wide">Verification Strategy</span>
               </div>
             </div>
           </div>

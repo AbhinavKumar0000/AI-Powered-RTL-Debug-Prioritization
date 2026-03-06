@@ -1,7 +1,7 @@
-# INT16 Technical Platform
-### High Precision RTL Bug Prioritization and Intelligence Engine
+# AI Based Bug Prioritization Engine
+### High Precision RTL Bug Analysis and Intelligence Platform
 
-INT16 is a production-grade verification intelligence platform designed to accelerate RTL (Register-Transfer Level) debugging cycles. By leveraging advanced semantic analysis and hierarchical clustering, INT16 transforms raw verification logs into actionable defect intelligence, allowing engineering teams to focus on high-impact architectural fixes rather than manual log parsing.
+This engine is a production-grade verification intelligence platform designed to accelerate RTL (Register-Transfer Level) debugging cycles. By leveraging advanced semantic analysis and hierarchical clustering, the engine transforms raw verification logs into actionable defect intelligence, allowing engineering teams to focus on high-impact architectural fixes rather than manual log parsing.
 
 ## System Architecture
 
@@ -18,7 +18,7 @@ A specialized transformer model classifies log entries across four critical tier
 *   **Info**: Nominal system telemetry and state transitions.
 
 ### 3. Semantic Intelligence and Clustering
-Utilizing vector embeddings, the platform identifies latent patterns across thousands of log entries. By mapping semantic similarities, INT16 clusters related failures into "Bug Roots," preventing redundant bug reports and identifying systemic design flaws.
+Utilizing vector embeddings, the platform identifies latent patterns across thousands of log entries. By mapping semantic similarities, the engine clusters related failures into "Bug Roots," preventing redundant bug reports and identifying systemic design flaws.
 
 ### 4. Reliability Scoring and Risk Mapping
 The platform computes a "Module Reliability Index" (MRI) by analyzing the frequency, severity, and temporal density of errors. This data is visualized via a high-density heatmap, allowing leads to identify high-risk modules at a glance.
@@ -49,8 +49,9 @@ A deep-dive tool for inspecting raw log data. It features a floating analysis pa
 *   **Deployment**: Vercel ready with comprehensive environment orchestration.
 
 ## Development Team
+**VIT Bhopal University**
 
-The INT16 platform is engineered by a specialized team focused on the intersection of hardware verification and artificial intelligence:
+The platform is engineered by a specialized team focused on the intersection of hardware verification and artificial intelligence:
 
 *   **Abhinav Kumar**: AI & Backend Engineering
 *   **Nishant Aryan**: Frontend Development
@@ -68,4 +69,4 @@ To initialize the platform in a production environment:
 4.  Launch the service: `npm start`.
 
 ---
-INT16 Technical Platform. Built for the next generation of hardware verification.
+AI Bug Prioritization Technical Platform. Built for the next generation of hardware verification.

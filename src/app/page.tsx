@@ -5,6 +5,7 @@ import { useAnalysisStore } from "@/store/analysisStore";
 import { LogParser } from "@/lib/logParser";
 import { clsx } from "clsx";
 import { Play } from "lucide-react";
+import { motion } from "framer-motion";
 
 const PIPELINE_STEPS = [
   { key: "parsing", label: "Parse & Sanitize", api: "Local Engine" },
@@ -91,34 +92,69 @@ export default function HomePage() {
 
       <div className="w-full max-w-[800px] z-10 flex flex-col items-center">
 
-        {/* Sleek Hero header */}
-        <div className="text-center space-y-6 animate-fade-in mb-14">
-          <h1 className="text-[48px] font-bold text-[#E6EDF3] tracking-tighter leading-[1.1] bg-clip-text">
-            AI Bug Prioritizer
-          </h1>
-          <p className="text-[17px] text-[#9DA7B3] font-medium max-w-[650px] mx-auto leading-relaxed">
-            Already contains logs and technical traces to test this project. Upload custom verification logs to automatically detect, cluster, and prioritize critical RTL bugs.
+        {/* Sleek Hero header - Fixed position to prevent shifts */}
+        <div className="text-center animate-fade-in w-full overflow-hidden shrink-0 mt-[-6vh]">
+
+          {/* Animated Marquee Panel - Moved higher */}
+          <div className="relative w-full py-2 bg-[#11161D]/50 border-y border-[#1E2632] overflow-hidden group mb-6">
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0B0F14] to-transparent z-10" />
+            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#0B0F14] to-transparent z-10" />
+
+            <motion.div
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+              className="flex items-center gap-12 whitespace-nowrap w-fit px-12"
+            >
+              {[1, 2].map((loop) => (
+                <div key={loop} className="flex items-center gap-12">
+                  <span className="text-[9px] font-black text-[#4F8CFF] uppercase tracking-[0.3em]">Industrial Verification Intelligence</span>
+                  <div className="w-1 h-1 rounded-full bg-[#1E2632]" />
+                  <span className="text-[9px] font-black text-[#9DA7B3] uppercase tracking-[0.3em]">Accelerating Silicon TTM</span>
+                  <div className="w-1 h-1 rounded-full bg-[#1E2632]" />
+                  <span className="text-[9px] font-black text-[#4F8CFF] uppercase tracking-[0.3em]">Zero-Noise Defect Isolation</span>
+                  <div className="w-1 h-1 rounded-full bg-[#1E2632]" />
+                  <span className="text-[9px] font-black text-[#9DA7B3] uppercase tracking-[0.3em]">Enterprise Reliability Mapping</span>
+                  <div className="w-1 h-1 rounded-full bg-[#1E2632]" />
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          <div className="flex flex-col items-center gap-6 mb-8">
+            <h1 className="text-[52px] font-black text-[#E6EDF3] tracking-tighter leading-[1.0] max-w-[800px] mx-auto drop-shadow-2xl">
+              AI Based Bug <span className="text-[#4F8CFF] glow-primary-text">Prioritization Engine</span>
+            </h1>
+
+            <div className="flex items-center gap-4 px-5 py-2 bg-[#4F8CFF]/5 border border-[#4F8CFF]/20 rounded-xl shadow-[0_0_20px_rgba(79,140,255,0.05)]">
+              <div className="w-2.5 h-2.5 rounded-full bg-[#4F8CFF] animate-pulse shadow-[0_0_10px_rgba(79,140,255,0.5)]" />
+              <span className="text-[14px] font-bold text-[#E6EDF3] tracking-[0.2em] uppercase opacity-90 font-sans">Enterprise Grade Verification</span>
+            </div>
+          </div>
+
+          <p className="text-[17px] text-[#9DA7B3] font-medium max-w-[650px] mx-auto leading-relaxed opacity-70 mb-10">
+            Automated defect detection and prioritization for complex RTL environments.
+            Upload simulation logs to isolate critical failures with semantic intelligence.
           </p>
         </div>
 
-        {/* Global Upload State Frame */}
-        <div className="w-full relative">
+        {/* Action Area - Upload or Progress */}
+        <div className="w-full relative min-h-[320px] flex flex-col items-center">
           {!isRunning && !pipelineError ? (
             <div className="animate-slide-up flex flex-col items-center w-full" style={{ animationDelay: "0.1s" }}>
 
               {/* Primary sample trigger relocated to upper position */}
               <button
                 onClick={loadSampleFile}
-                className="mb-8 flex items-center justify-center gap-2.5 h-[56px] px-10 bg-[#4F8CFF] hover:bg-[#3A73E4] text-white text-[15px] font-bold rounded-2xl transition-all shadow-[0_8px_30px_rgba(79,140,255,0.25)] hover:scale-[1.02] active:scale-[0.98] w-full max-w-[320px] group"
+                className="mb-6 flex items-center justify-center gap-2.5 h-[48px] px-8 bg-[#4F8CFF] hover:bg-[#3A73E4] text-white text-[14px] font-bold rounded-xl transition-all shadow-[0_8px_30px_rgba(79,140,255,0.2)] hover:scale-[1.02] active:scale-[0.98] w-full max-w-[280px] group"
               >
-                <div className="w-5 h-5 rounded-md bg-white/20 flex items-center justify-center">
-                  <Play size={10} className="fill-white" />
+                <div className="w-4 h-4 rounded-md bg-white/20 flex items-center justify-center">
+                  <Play size={8} className="fill-white" />
                 </div>
-                Use Simulation Log (rtl.txt)
+                Use Simulation Log
               </button>
 
               {/* Massive Primary Drop Area */}
-              <div className="w-full max-w-[720px] z-20">
+              <div className="w-full max-w-[680px] z-20">
                 <FileDropzone />
               </div>
             </div>
@@ -126,7 +162,7 @@ export default function HomePage() {
             <div className="animate-fade-in w-full max-w-[720px] mx-auto">
               {/* Pipeline Active view */}
               {!pipelineError && (
-                <div className="card p-10 bg-[#161C24] border-[#1E2632]">
+                <div className="card p-8 bg-[#161C24] border-[#1E2632]">
                   <div className="flex items-center justify-between mb-8">
                     <div>
                       <h3 className="text-[16px] font-semibold text-[#E6EDF3]">Analysis Pipeline Running</h3>
@@ -142,7 +178,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Deep Progress Bar */}
-                  <div className="h-2 bg-[#0B0F14] rounded-full overflow-hidden mb-10 border border-[#1E2632] shadow-inner">
+                  <div className="h-2 bg-[#0B0F14] rounded-full overflow-hidden mb-8 border border-[#1E2632] shadow-inner">
                     <div
                       className="h-full bg-[#4F8CFF] rounded-full transition-all duration-700 ease-out glow-primary relative"
                       style={{ width: `${pipelineProgress}%` }}
@@ -152,7 +188,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Step tracker */}
-                  <div className="space-y-5">
+                  <div className="space-y-4">
                     {PIPELINE_STEPS.map((step, idx) => {
                       const stepKeys = PIPELINE_STEPS.map((s) => s.key);
                       const currentIdx = stepKeys.indexOf(pipelineStep);
@@ -204,7 +240,7 @@ export default function HomePage() {
 
               {/* Error state */}
               {pipelineError && (
-                <div className="mt-6 p-8 bg-[#EF4444]/5 border border-[#EF4444]/20 rounded-[14px] animate-slide-up shadow-sm">
+                <div className="mt-4 p-6 bg-[#EF4444]/5 border border-[#EF4444]/20 rounded-[14px] animate-slide-up shadow-sm">
                   <div className="flex items-center gap-3 mb-4">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2.5"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
                     <span className="font-bold text-[16px] text-[#E6EDF3] tracking-tight">Pipeline disruption</span>

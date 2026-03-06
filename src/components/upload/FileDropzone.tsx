@@ -72,7 +72,7 @@ export function FileDropzone() {
   return (
     <div
       className={clsx(
-        "w-full h-[300px] border-2 border-dashed rounded-[18px] flex flex-col items-center justify-center transition-all duration-300 relative group cursor-pointer overflow-hidden z-20",
+        "w-full h-[200px] border-2 border-dashed rounded-[18px] flex flex-col items-center justify-center transition-all duration-300 relative group cursor-pointer overflow-hidden z-20",
         isDragging
           ? "border-[#4F8CFF] bg-[#4F8CFF]/5 shadow-[0_8px_30px_rgba(79,140,255,0.15)] scale-[1.02]"
           : "border-[#2A3442] bg-[#131922] hover:border-[#4F8CFF]/50 hover:shadow-[0_8px_30px_rgba(79,140,255,0.08)]"
@@ -93,11 +93,11 @@ export function FileDropzone() {
       />
 
       <div className="relative z-10 flex flex-col items-center text-center pointer-events-none">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4F8CFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={clsx("mb-5 transition-all duration-300", isDragging ? "scale-125 -translate-y-2 opacity-100" : "opacity-90 group-hover:scale-110 group-hover:-translate-y-1")}><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="17 8 12 3 7 8" /><line x1="12" y1="3" x2="12" y2="15" /></svg>
-        <span className="text-[20px] font-bold tracking-tight transition-colors text-[#E6EDF3] group-hover:text-white">
-          {isDragging ? "Drop to begin analysis" : "Drop RTL Log File or click to upload"}
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4F8CFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={clsx("mb-3 transition-all duration-300", isDragging ? "scale-110 -translate-y-1 opacity-100" : "opacity-90 group-hover:scale-105 group-hover:-translate-y-0.5")}><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="17 8 12 3 7 8" /><line x1="12" y1="3" x2="12" y2="15" /></svg>
+        <span className="text-[17px] font-bold tracking-tight transition-colors text-[#E6EDF3] group-hover:text-white">
+          {isDragging ? "Drop to begin analysis" : "Drop RTL Log or Click to Browse"}
         </span>
-        <span className="text-[13px] text-[#6B7280] font-mono mt-2 transition-colors group-hover:text-[#9DA7B3]">Supports .log .txt .sim .out</span>
+        <span className="text-[11px] text-[#6B7280] font-mono mt-1 transition-colors group-hover:text-[#9DA7B3]">Supports .log .txt .sim .out</span>
       </div>
     </div>
   );

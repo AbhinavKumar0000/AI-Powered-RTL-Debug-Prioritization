@@ -118,7 +118,7 @@ export function ModelPlayground() {
             <div className="w-2 h-2 rounded-full bg-[#4F8CFF] shadow-[0_0_8px_rgba(79,140,255,0.6)]" />
             <h2 className="text-[18px] font-bold text-[#E6EDF3] tracking-tight uppercase">Technical Playground</h2>
           </div>
-          <p className="text-[13px] text-[#6B7280] font-medium">Inference gateway for INT16 verification engines.</p>
+          <p className="text-[13px] text-[#6B7280] font-medium">Inference gateway for high-precision verification engines.</p>
         </div>
         <div className="flex items-center gap-3 px-4 py-2 bg-[#161C24] border border-[#1E2632] rounded-xl shadow-inner">
           <CheckCircle2 size={14} className="text-[#22C55E]" />
