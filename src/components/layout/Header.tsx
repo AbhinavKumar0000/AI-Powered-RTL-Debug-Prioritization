@@ -72,17 +72,7 @@ export function Header() {
 
       {/* Right Actions */}
       <div className="flex items-center gap-4">
-        <div
-          onClick={() => alert("Command Menu coming soon!")}
-          className="flex items-center text-[11px] font-mono text-[#9BA3AF] px-2.5 py-1.5 rounded-md bg-[#1C1F2A] border border-[#272B36] hover:bg-[#272B36] transition-colors cursor-pointer"
-        >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
-            <circle cx="11" cy="11" r="8" />
-            <line x1="21" y1="21" x2="16.65" y2="16.65" />
-          </svg>
-          Search
-          <span className="ml-3 text-[#6B7280]">⌘K</span>
-        </div>
+        {/* Actions removed as requested */}
       </div>
 
     </header>

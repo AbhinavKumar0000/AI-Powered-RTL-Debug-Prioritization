@@ -34,36 +34,39 @@ export function Sidebar() {
       {/* Header / Logo */}
       <div className="h-[64px] flex items-center justify-between px-5 border-b border-[#1E2632] shrink-0">
         <div className={clsx("flex items-center gap-3 overflow-hidden", collapsed ? "justify-center w-full" : "")}>
-          <div className="w-7 h-7 rounded-md flex items-center justify-center shrink-0">
-            <svg width="24" height="24" viewBox="0 0 64 64" fill="none" className="shrink-0">
-              <rect x="12" y="12" width="40" height="40" rx="6" stroke="#4F8CFF" strokeWidth="2.5" />
-              <path d="M24 32h16M32 24v16" stroke="#E6EDF3" strokeWidth="2" strokeLinecap="round" />
+          <button
+            onClick={() => setCollapsed(!collapsed)}
+            className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-[#4F8CFF]/10 border border-[#4F8CFF]/20 hover:bg-[#4F8CFF]/20 transition-all group/logo"
+            title={collapsed ? "Expand Sidebar" : "Collapse Sidebar"}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="shrink-0">
+              {/* Stylized 'D' Shape */}
+              <path
+                d="M4 4h8a8 8 0 0 1 0 16H4V4z"
+                stroke="#4F8CFF"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="group-hover/logo:stroke-[#E6EDF3] transition-colors"
+              />
+              {/* Activity Pulse Path requested by user */}
+              <path
+                d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"
+                stroke="#E6EDF3"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="opacity-80 group-hover/logo:opacity-100 transition-opacity"
+              />
             </svg>
-          </div>
+          </button>
           {!collapsed && (
             <span className="text-[14px] font-semibold text-[#E6EDF3] tracking-tight whitespace-nowrap">
               Bug Prioritizer
             </span>
           )}
         </div>
-        <button
-          onClick={() => setCollapsed(!collapsed)}
-          className={clsx("text-[#9DA7B3] hover:text-[#E6EDF3] transition-colors p-[5px] rounded border border-transparent hover:border-[#1E2632] hover:bg-[#161C24]", collapsed ? "hidden" : "block")}
-        >
-          <ChevronLeft size={16} />
-        </button>
       </div>
-
-      {collapsed && (
-        <div className="flex justify-center mt-3 border-b border-[#1E2632] pb-3 px-2">
-          <button
-            onClick={() => setCollapsed(false)}
-            className="text-[#9DA7B3] hover:text-[#E6EDF3] w-full flex justify-center py-[5px] transition-colors rounded hover:bg-[#161C24]"
-          >
-            <Menu size={16} />
-          </button>
-        </div>
-      )}
 
       {/* Navigation */}
       <nav className="flex-1 px-4 py-8 space-y-1.5 overflow-y-auto custom-scrollbar">
