@@ -14,26 +14,15 @@ This platform resolves that bottleneck. Log files are ingested, parsed, and proc
 
 ## Key Capabilities
 
-**Automated Log Parsing**
-A multi-format parser normalizes heterogeneous RTL simulation output. Three recognized formats are supported natively: timestamp-module-message (Format A), bracketed timestamp-module-message (Format B), and timestamp-severity-module-message (Format C). The parser extracts structured fields from each line and flags malformed entries without halting ingestion.
-
-**Severity Classification**
-Log entries without explicit severity tags are submitted in batches to a remote severity classifier hosted on Hugging Face Spaces. The model predicts one of four tiers: INFO, WARNING, ERROR, or CRITICAL. Batch processing caps at 250 entries across five concurrent batches with a 10-second per-request timeout to maintain pipeline throughput.
-
-**Semantic Failure Clustering**
-Up to 20 unique message strings from the parsed log set are submitted in parallel to the Intelligence API. The service maps each message to a named failure cluster using embedding similarity, returning a cluster ID, cluster name, subsystem label, anomaly flag, and similarity confidence score. Results are propagated back to all log entries sharing the same message string.
-
-**Module Reliability Scoring**
-The raw log file is submitted to a dedicated Reliability Engine that computes per-module failure probability. Output includes failure probability (0.0 to 1.0), risk tier classification (low, medium, high), and error count per module. The platform normalizes both array and object response schemas from the upstream service for compatibility.
-
-**LLM Root Cause Synthesis**
-Gemini 2.5 Flash is invoked with a structured prompt containing severity statistics, high-risk module data, top cluster annotations, and critical log samples. The model returns a five-section analysis: executive summary, root cause hypotheses, affected module identification, recommended debugging actions, and overall risk assessment.
-
-**Interactive Debugging Dashboard**
-A real-time web dashboard presents severity distributions, error timelines, module risk heatmaps, cluster distributions, and a full log viewer with inline AI insight annotations. An integrated chat interface allows engineers to query the analysis context using natural language.
-
-**Technical Playground**
-An IDE-style interface for direct invocation of individual inference endpoints. Engineers can submit custom payloads to the Severity Classifier, Intelligence API, and Reliability Engine independently and inspect raw request and response objects with timing metrics.
+| Capability | Description |
+|---|---|
+| Automated Log Parsing | Normalizes three RTL simulation output formats (A, B, C) into structured log entries. Malformed lines are tracked without interrupting ingestion. |
+| Severity Classification | Untagged log entries are batch-classified into INFO, WARNING, ERROR, or CRITICAL tiers via a remote inference service. |
+| Semantic Failure Clustering | Up to 20 unique message strings are mapped to named failure clusters using embedding similarity, with anomaly detection and confidence scoring. |
+| Module Reliability Scoring | Per-module failure probability (0.0 to 1.0) is computed by the Reliability Engine and tiered into low, medium, and high risk categories. |
+| LLM Root Cause Synthesis | A large language model synthesizes pipeline outputs into a structured analysis covering root causes, affected modules, recommended actions, and risk assessment. |
+| Interactive Debugging Dashboard | Real-time visualization of severity distributions, error timelines, module risk heatmaps, and cluster distributions with an AI-powered chat interface. |
+| Technical Playground | IDE-style interface for direct invocation of individual inference endpoints with raw request and response inspection. |
 
 ---
 
@@ -159,7 +148,7 @@ Risk tier thresholds:
 
 ### Stage 5: LLM Synthesis
 
-A structured prompt is constructed from pipeline outputs and submitted to Gemini 2.5 Flash. The model is instructed to return five sections: executive summary, root causes, affected modules, recommended actions, and risk assessment. Safety filters are set to BLOCK_NONE to prevent false positives from technical RTL terminology.
+A structured prompt is constructed from pipeline outputs and submitted to a large language model. The model returns five sections: executive summary, root causes, affected modules, recommended actions, and risk assessment. Safety filters are configured to prevent false positives from technical RTL terminology.
 
 ---
 
@@ -189,7 +178,7 @@ flowchart TD
     Clusters --> Merge
     Risks --> Merge
 
-    Merge --> P5["Stage 5: LLM Synthesis\nsynthesizeWithGemini\nGemini 2.5 Flash"]
+    Merge --> P5["Stage 5: LLM Synthesis\nsynthesizeWithLLM\nLarge Language Model"]
     P5 --> Summary["Executive Summary\nRoot cause analysis"]
 
     Summary --> Result["AnalysisResult\nJSON Response"]
