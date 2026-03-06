@@ -41,28 +41,27 @@ An IDE-style interface for direct invocation of individual inference endpoints. 
 
 The platform follows a layered architecture with a Next.js frontend serving as both the user interface host and the API gateway. All ML inference is delegated to external microservices hosted on Hugging Face Spaces. The Gemini API handles LLM synthesis server-side.
 
-```
-Client Browser
-    |
-Next.js Application (Vercel Edge)
-    |
-    +-- /api/analyze     (Pipeline Orchestrator)
-    |       |
-    |       +-- LogParser (local, synchronous)
-    |       +-- Severity Classifier API (Hugging Face)
-    |       +-- Intelligence API (Hugging Face)
-    |       +-- Reliability Engine API (Hugging Face)
-    |       +-- Gemini 2.5 Flash (Google AI)
-    |
-    +-- /api/playground  (Proxy Gateway)
-    |       |
-    |       +-- Severity Classifier API
-    |       +-- Intelligence API
-    |       +-- Reliability Engine API
-    |
-    +-- /api/chat        (Conversational QA)
-            |
-            +-- Gemini 2.5 Flash (context-grounded)
+```mermaid
+flowchart TD
+    Browser["Client Browser"]
+
+    Browser --> NextJS["Next.js Application\nVercel Edge"]
+
+    NextJS --> Analyze["/api/analyze\nPipeline Orchestrator"]
+    NextJS --> Playground["/api/playground\nProxy Gateway"]
+    NextJS --> Chat["/api/chat\nConversational QA"]
+
+    Analyze --> Parser["LogParser\nLocal / Synchronous"]
+    Analyze --> SevAPI1["Severity Classifier\nHugging Face"]
+    Analyze --> IntAPI1["Intelligence API\nHugging Face"]
+    Analyze --> RelAPI1["Reliability Engine\nHugging Face"]
+    Analyze --> Gemini1["Gemini 2.5 Flash\nGoogle AI"]
+
+    Playground --> SevAPI2["Severity Classifier"]
+    Playground --> IntAPI2["Intelligence API"]
+    Playground --> RelAPI2["Reliability Engine"]
+
+    Chat --> Gemini2["Gemini 2.5 Flash\nContext-Grounded"]
 ```
 
 **Frontend State**
@@ -166,35 +165,36 @@ A structured prompt is constructed from pipeline outputs and submitted to Gemini
 
 ## Data Flow
 
-```
-Log File (upload or drag-and-drop)
-    |
-POST /api/analyze (multipart/form-data)
-    |
-LogParser.parseFile()
-    --> LogEntry[]
-    |
-inferSeverities()
-    --> Severity Classifier API (batch, up to 250 entries)
-    --> severityMap: Map<id, Severity>
-    |
-clusterMessages()
-    --> Intelligence API (parallel, up to 20 unique messages)
-    --> ClusterResult[]
-    |
-scoreReliability()
-    --> Reliability Engine API (raw file blob)
-    --> ModuleRisk[]
-    |
-synthesizeWithGemini()
-    --> Gemini 2.5 Flash
-    --> summary: string
-    |
-AnalysisResult (JSON response)
-    |
-Zustand Store (client-side state)
-    |
-Dashboard Components (Recharts, Plotly)
+```mermaid
+flowchart TD
+    Upload["Log File Upload\nDrag-and-drop or file picker"]
+    Upload --> API["POST /api/analyze\nmultipart/form-data"]
+
+    API --> P1["Stage 1: Log Parsing\nLogParser.parseFile\nFormats A, B, C"]
+    P1 --> Entries["LogEntry Array\nStructured log records"]
+
+    Entries --> P2["Stage 2: Severity Inference\ninferSeverities\nBatches of 50, up to 250 entries"]
+    P2 --> SevAPI["Severity Classifier API\nHugging Face"]
+    SevAPI --> SevMap["severityMap\nid to Severity"]
+
+    Entries --> P3["Stage 3: Semantic Clustering\nclusterMessages\nParallel, up to 20 unique messages"]
+    P3 --> IntAPI["Intelligence API\nHugging Face"]
+    IntAPI --> Clusters["ClusterResult Array\nNamed failure groups"]
+
+    Upload --> P4["Stage 4: Reliability Scoring\nscoreReliability\nRaw file blob upload"]
+    P4 --> RelAPI["Reliability Engine\nHugging Face"]
+    RelAPI --> Risks["ModuleRisk Array\nPer-module failure probability"]
+
+    SevMap --> Merge["Merge and Compute Stats"]
+    Clusters --> Merge
+    Risks --> Merge
+
+    Merge --> P5["Stage 5: LLM Synthesis\nsynthesizeWithGemini\nGemini 2.5 Flash"]
+    P5 --> Summary["Executive Summary\nRoot cause analysis"]
+
+    Summary --> Result["AnalysisResult\nJSON Response"]
+    Result --> Store["Zustand Store\nClient-side state"]
+    Store --> Dashboard["Dashboard Components\nRecharts and Plotly"]
 ```
 
 Client-side state updates are reactive. Once the `AnalysisResult` is stored, all dashboard components re-render synchronously. Filters (severity, cluster, search query) operate on the cached result without re-fetching.
